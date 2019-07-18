@@ -84,12 +84,12 @@ void Core::checkVersion()
 
     if (actual.first < 18) {
         EV_FATAL << "Reported TraCI server version is incompatible with client API" << endl;
-        throw cRuntimeError("Version of TraCI server is too old (required: 18, provided: %i), please update SUMO!", actual.first);
+        //throw cRuntimeError("Version of TraCI server is too old (required: 18, provided: %i), please update SUMO!", actual.first);
     } else if (expected < 0) {
         EV_DEBUG << "No specific TraCI server version requested, accepting connection..." << endl;
     } else if (expected != actual.first) {
         EV_FATAL << "Reported TraCI server version does not match expected version " << expected << endl;
-        throw cRuntimeError("TraCI server version mismatch (expected: %i, actual: %i)", expected, actual.first);
+        //throw cRuntimeError("TraCI server version mismatch (expected: %i, actual: %i)", expected, actual.first);
     }
 }
 
